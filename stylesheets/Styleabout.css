@@ -5,12 +5,14 @@ body {
   .image1 {
     width: 300px;
     border-radius: 150px;
+    position: relative;
 }
 
 
   .image2 {
 	width: 300px;
-	border radius: 0px
+	border radius: 0px;
+		position: relative;
 }
 
 
