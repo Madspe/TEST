@@ -12,9 +12,8 @@ body {
   .image2 {
 	width: 100px;
 	border radius: 0px;
-		position: absolute;
-	  top: 770px;
-	  left: 50px;
+		position: relative;
+	  
 }
 
 
