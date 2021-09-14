@@ -4,12 +4,11 @@ body {
 
   .image1 {
     width: 300px;
-    border-radius: 50px;
-    
+    border-radius: 150px;
 }
 
 
-.image2 {
+  .image2 {
 	width: 300px;
 	border radius: 0px
 }
