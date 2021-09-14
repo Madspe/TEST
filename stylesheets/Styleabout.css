@@ -2,14 +2,14 @@ body {
 	Background-color: green;
 }
 
-  #vd1 {
+  .image1 {
     width: 300px;
     border-radius: 50px;
     
 }
 
 
-#vd2 {
+.image2 {
 	width: 300px;
 	border radius: 0px
 }
