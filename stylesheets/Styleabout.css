@@ -2,9 +2,16 @@ body {
 	Background-color: green;
 }
 
-
-img {
-	width: 300px;
-	float:
+  #vd1 {
+    width: 300px;
+    border-radius: 50px;
+    
 }
+
+
+#vd2 {
+	width: 300px;
+	border radius: 0px
+}
+
 
