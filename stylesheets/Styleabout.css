@@ -14,3 +14,16 @@ body {
 }
 
 
+
+#vd1, #vd2, #vd2, #vd3, #vd4, #vd5, #vd6, #vd7 {
+    border: 4px solid black;
+    height: 300px;
+    width: 200px;
+    margin: 200px;
+    position: relative;
+    text-align: center;
+    float: left;
+    display: block;
+    text-decoration: none;
+    border-radius: 25px;
+   }
