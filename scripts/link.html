@@ -23,6 +23,12 @@
 
         }
 
+        .c {
+            color: darkred;
+            font-size: 5em;
+            font-style: italic;
+        }
+
 
 
 
@@ -39,85 +45,9 @@ Karakter Eksamen:<input type="text" id="inputKar1">
 Karakter Semesteroppgave:<input type="text"  id="inputKar2">
 <input type="button" value="Kalkuler" id="btnok">
 
-<p id="tilbakemelding"></p>
-
-<script>
-var inputKar1=document.getElementById("inputKar1");
-var inputKar2=document.getElementById("inputKar2");
-var btnok=document.getElementById("btnok");
-var Kar1;
-var Kar2;
-var tilbakemelding=document.getElementById("tilbakemelding");
-
-var A=6;
-var B=5;
-var C=4;
-var D=3;
-var E=2;
-var F=0;
+<h1 class="c" id="tilbakemelding"></h1>
 
 
-
-btnok.onclick=function (){
-    if (inputKar1.value=="A") {Kar1=6;};
-    if (inputKar1.value=="B") {Kar1=5;};
-    if (inputKar1.value=="C") {Kar1=4;};
-    if (inputKar1.value=="D") {Kar1=3;};
-    if (inputKar1.value=="E") {Kar1=2;};
-    if (inputKar1.value=="F") {Kar1=0;};
-
-    if (inputKar2.value=="A") {Kar2=6;};
-    if (inputKar2.value=="B") {Kar2=5;};
-    if (inputKar2.value=="C") {Kar2=4;};
-    if (inputKar2.value=="D") {Kar2=3;};
-    if (inputKar2.value=="E") {Kar2=2;};
-    if (inputKar2.value=="F") {Kar2=0;};
-
-
-
-
-var karakter=((Kar1*40)+(Kar2*60))/100;
-tilbakemelding.innerHTML
-
-
-
-
-    if(karakter<=1.4){
-        tilbakemelding.innerHTML="DU STYRKER DIN NOOB";
-    }
-
-    if (karakter >= 4.5 && karakter<=5.4) {
-        tilbakemelding.innerHTML="B";
-    }
-
-    if (karakter >= 2.5 && karakter<=3.4) {
-        tilbakemelding.innerHTML = "D";
-    }
-
-if (karakter >= 3.5 && karakter<=4.4) {
-    tilbakemelding.innerHTML="C";
-}
-
-    if (karakter >= 5.5 && karakter<=6.4) {
-        tilbakemelding.innerHTML="A";
-    }
-
-    if (karakter >= 1.5 && karakter<=2.4) {
-        tilbakemelding.innerHTML="E";
-    }
-
-    if(Kar1==0){
-        tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
-    }
-    if(Kar2==0){
-        tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
-    }
-
-}
-
-
-
-</script>
 
 
 
@@ -129,6 +59,92 @@ if (karakter >= 3.5 && karakter<=4.4) {
     </div>
 
 
-<h1>Din karakter er ......</h1>
+<h1 id="tilbakemelding2"></h1>
+
+
+<script>
+    var inputKar1=document.getElementById("inputKar1");
+    var inputKar2=document.getElementById("inputKar2");
+    var btnok=document.getElementById("btnok");
+    var Kar1;
+    var Kar2;
+    var tilbakemelding=document.getElementById("tilbakemelding");
+
+    var A=6;
+    var B=5;
+    var C=4;
+    var D=3;
+    var E=2;
+    var F=0;
+
+    var tilbakemedling2=document.getElementById("tilbakemelding2");
+
+
+    btnok.onclick=function (){
+        if (inputKar1.value=="A") {Kar1=6;};
+        if (inputKar1.value=="B") {Kar1=5;};
+        if (inputKar1.value=="C") {Kar1=4;};
+        if (inputKar1.value=="D") {Kar1=3;};
+        if (inputKar1.value=="E") {Kar1=2;};
+        if (inputKar1.value=="F") {Kar1=0;};
+
+        if (inputKar2.value=="A") {Kar2=6;};
+        if (inputKar2.value=="B") {Kar2=5;};
+        if (inputKar2.value=="C") {Kar2=4;};
+        if (inputKar2.value=="D") {Kar2=3;};
+        if (inputKar2.value=="E") {Kar2=2;};
+        if (inputKar2.value=="F") {Kar2=0;};
+
+
+
+
+        var karakter=((Kar1*40)+(Kar2*60))/100;
+        tilbakemelding.innerHTML
+
+
+
+
+        if(karakter<=1.4){
+            tilbakemelding.innerHTML="DU STYRKER DIN NOOB";
+        }
+
+        if (karakter >= 4.5 && karakter<=5.4) {
+            tilbakemelding.innerHTML="B";
+        }
+
+        if (karakter >= 2.5 && karakter<=3.4) {
+            tilbakemelding.innerHTML = "D";
+        }
+
+        if (karakter >= 3.5 && karakter<=4.4) {
+            tilbakemelding.innerHTML="C";
+        }
+
+        if (karakter >= 5.5 && karakter<=6.4) {
+            tilbakemelding.innerHTML="A";
+        }
+
+        if (karakter >= 1.5 && karakter<=2.4) {
+            tilbakemelding.innerHTML="E";
+        }
+
+        if(Kar1==0){
+            tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
+            tilbakemedling2.innerHTML="STRYK";
+        }
+        if(Kar2==0){
+            tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
+            tilbakemedling2.innerHTML="STRYK";
+        }
+
+        else {tilbakemelding2.innerHTML="Din tallkarakter i IS-100 er "+karakter+"!";}
+    }
+
+
+
+</script>
+
+
+
 </body>
 </html>
