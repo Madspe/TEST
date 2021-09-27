@@ -32,7 +32,7 @@
 <body>
 
 <p class="a">
-    Skal prøve å lage en karakterkalkulator til BACIT</p>
+    Karakterkalkulator til IS-100</p>
 
 Karakter Eksamen:<input type="text" id="inputKar1">
 <br>
@@ -56,21 +56,31 @@ var D=3;
 var E=2;
 var F=0;
 
-if (inputKar1.value=="A")
+
 
 btnok.onclick=function (){
-Kar1=parseFloat(inputKar1.value);
-Kar2=parseFloat(inputKar2.value);
+    if (inputKar1.value=="A") {Kar1=6;};
+    if (inputKar1.value=="B") {Kar1=5;};
+    if (inputKar1.value=="C") {Kar1=4;};
+    if (inputKar1.value=="D") {Kar1=3;};
+    if (inputKar1.value=="E") {Kar1=2;};
+    if (inputKar1.value=="F") {Kar1=0;};
+
+    if (inputKar2.value=="A") {Kar2=6;};
+    if (inputKar2.value=="B") {Kar2=5;};
+    if (inputKar2.value=="C") {Kar2=4;};
+    if (inputKar2.value=="D") {Kar2=3;};
+    if (inputKar2.value=="E") {Kar2=2;};
+    if (inputKar2.value=="F") {Kar2=0;};
+
+
+
+
 var karakter=((Kar1*40)+(Kar2*60))/100;
 tilbakemelding.innerHTML
 
 
-if(Kar1==0){
-    tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
-}
-if(Kar2==0){
-    tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
-}
+
 
     if(karakter<=1.4){
         tilbakemelding.innerHTML="DU STYRKER DIN NOOB";
@@ -96,22 +106,19 @@ if (karakter >= 3.5 && karakter<=4.4) {
         tilbakemelding.innerHTML="E";
     }
 
+    if(Kar1==0){
+        tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
+    }
+    if(Kar2==0){
+        tilbakemelding.innerHTML="DU STRYKER DIN NOOB";
+    }
+
 }
 
 
 
 </script>
 
-
-
-
-    
-    
-    
-<p class="mads">Vanskelig</p>
-<p class="ane">Får se om vi får til form</p>
-<div style="color: blue;">
-<p>test</p>
 
 
     <div class="container">
@@ -121,7 +128,7 @@ if (karakter >= 3.5 && karakter<=4.4) {
 </div>
     </div>
 
-<!script src="scripts/Snake.js"><!/script>
+
 <h1>Din karakter er ......</h1>
 </body>
 </html>
