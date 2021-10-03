@@ -14,7 +14,7 @@
 <div id="myData"></div>
 <script>
         fetch('https://bacit.info/hwr/20210930160812-8b40c9e15fad01aaf7f955e543391a0c.json')
-            .then(function (response) {
+                    .then(function (response) {
                 return response.json();
             })
             .then(function (data) {
@@ -36,7 +36,78 @@
                 mainContainer.appendChild(div);
  
         }
- 
+
+        fetch('https://bacit.info/hwr/20211003112107-7fad392c2938052237f79ed0c084c93d.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            var div = document.createElement("div");
+            div.innerHTML = 'data01: ' + data.data01 + "<br/>";
+            div.innerHTML += 'data02: ' + data.data02 + "<br/>";
+            div.innerHTML += 'dorn: ' + data.dorn + "<br/>";
+            div.innerHTML += 'cora: ' + data.cora + "<br/>";
+            div.innerHTML += 'trxid: ' + data.trxid + "<br/>";
+            div.innerHTML += 'time: ' + data.time + "<br/>";
+            mainContainer.appendChild(div);
+
+        }
+
+        fetch('https://bacit.info/hwr/20211003112304-40755a01bcb87af92e51de51bbd7a7c6.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            var div = document.createElement("div");
+            div.innerHTML = 'data01: ' + data.data01 + "<br/>";
+            div.innerHTML += 'data02: ' + data.data02 + "<br/>";
+            div.innerHTML += 'dorn: ' + data.dorn + "<br/>";
+            div.innerHTML += 'cora: ' + data.cora + "<br/>";
+            div.innerHTML += 'trxid: ' + data.trxid + "<br/>";
+            div.innerHTML += 'time: ' + data.time + "<br/>";
+            mainContainer.appendChild(div);
+
+        }
+
+        fetch('https://bacit.info/hwr/20211003112405-51177fef875fc2c39c9d0b9e523d6c78.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            var div = document.createElement("div");
+            div.innerHTML = 'data01: ' + data.data01 + "<br/>";
+            div.innerHTML += 'data02: ' + data.data02 + "<br/>";
+            div.innerHTML += 'dorn: ' + data.dorn + "<br/>";
+            div.innerHTML += 'cora: ' + data.cora + "<br/>";
+            div.innerHTML += 'trxid: ' + data.trxid + "<br/>";
+            div.innerHTML += 'time: ' + data.time + "<br/>";
+            mainContainer.appendChild(div);
+
+        }
 </script>
  
  
