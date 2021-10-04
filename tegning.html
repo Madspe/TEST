@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<canvas id="myCanvas" width="800" height="600" style="border:1px solid;">Nettleseren din støtter ikke HTML5</canvas>
+
+<script>
+    //definerer variabler
+    var startY= 50;
+    var startX=100;
+    var mellomrom=50;
+    var lengde=200;
+    var radius=5;
+var startY2= 50;
+    var myCanvas =document.getElementById("myCanvas"); //canvas med navn myCanvas blir tegnet, ctx er innholdet i myCanvas
+    var ctx =myCanvas.getContext("2d");
+
+fetch('https://bacit.info/hwr/20211003112304-40755a01bcb87af92e51de51bbd7a7c6.json')
+.then(function (response) {
+return response.json();
+})
+.then(function (data) {
+tegne(data);
+})
+
+
+.catch(function (err) {
+console.log('error: ' + err);
+});
+function tegne(data) {
+ctx.beginPath();
+ctx.moveTo(startX+parseFloat(data.dorn),startY2);
+ctx.arc(startX+parseFloat(data.dorn),startY2,5,0,2*Math.PI);
+ctx.fill()
+    ctx.fillStyle="blue"
+ctx.stroke();
+alert(startX+parseFloat(data.dorn));
+
+}
+
+
+
+
+
+
+
+
+
+    //lager array/ lister for tesks på begge sider av linjen:
+    //Her kan en legge in flere data/tekst ved å skrive ", 'dataEksempel'".
+    // Koden under vil da automatisk opprette en ny linje og ny tekst for hver ny data som blir lagt til i lista
+    //Merk at for hver "data1" (i data1Array) må det legges til en motpart "data2" på samme plass (i data2Array)
+    var data1Array =["data1.1", "data1.2", "data1.3", "data1.4"]; //tekst på venstre side
+    var data2Array =["data2.1", "data2.2", "data2.3", "data2.4"]; //tekst på høyre side
+
+    ctx.strokeStyle="black"; //linjefarge
+    ctx.font = '10px arial'; //tekst stil
+
+    //lager en "løkke" for å tegne alle linjer og tekst:
+
+    for(var teller=0; teller<data1Array.length ;teller++){ //variabelen "teller" starter som 0. Koden inni "{}" blir gjentatt så lenge
+    //variabelen "teller" er mindre enn lengden til arrayen/ listen "data1Array". På slutten av "{}" øker verdien "teller" med 1
+    //dermed vil koden bli gjentatt så mange ganger som antall data i "dataArray".
+
+    ctx.strokeText(data1Array[teller], startX-75, startY ); //tegner tekst på venstre side
+    ctx.beginPath(); //begynner ny "sti" for tegning
+    ctx.moveTo(startX, startY); //Setter startpunkt for tegningen/linjen
+    ctx.lineTo(startX+lengde, startY); //bestemmer hvor linjen skal gå
+    ctx.strokeText(data2Array[teller], startX+lengde+50, startY); //tegner tekst på høyre side
+    ctx.stroke(); //komando for å sette i gang tegningen
+    ctx.closePath(); //avslutter "stien" for tegningen
+    startY=startY+mellomrom; //øker Y-verdi med "mellomrom" (devinert ovenfor) for å få avstand til neste linje som blir tegnet
+    //Det går an å endre alle variablene ovenfor (mellomrom, startverdi x, startverdi Y etx)
+}
+
+    //vi kan senere legge fargede sirkler på lijene for å raportere dataen som vi har samlet inn
+
+    //Koden under er ikke aktuell enda, men verdt å se på for å forstå hvordan en kan tegne kuler
+    //(fortsetter med koden når vi finner ut hvordan en henter ut data fra serveren) ;)
+
+    //rød kule
+    ctx.beginPath(); //begynner "sti"
+    ctx.fillStyle="red"; //setter fyllfargen til rød
+    ctx.moveTo(startX, startY); //definerer startpunkt
+    ctx.arc(startX,startY,radius,0, 2*Math.PI); //lager en sirkel
+    ctx.fill(); //fyller sirkelen med farge
+    ctx.closePath(); //avslutter "sti"
+
+    //blå kule
+    ctx.beginPath();
+    ctx.fillStyle="blue";
+    ctx.moveTo(startX+30, startY)
+    ctx.arc(startX+30,startY,radius,0, 2*Math.PI);
+    ctx.fill();
+
+
+
+</script>
+
+</body>
+</html>
