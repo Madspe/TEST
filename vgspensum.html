@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>koding med patrick</title>
+</head>
+<body>
+
+
+
+
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid;"></canvas>
+
+
+<script>
+    //kobler sammen mot html objekt ovenfor
+    var myCanvas =document.getElementById("myCanvas");
+    var ctx= myCanvas.getContext("2d");
+
+    //definerer startpunkt, linje til, linje til og stopp.
+    ctx.beginPath();
+    ctx.moveTo(90,110);
+    ctx.lineTo(140,60);
+    ctx.lineTo(190,110);
+    ctx.closePath();
+    ctx.stroke();
+
+
+    ctx.moveTo(0,0);
+    ctx.lineTo(300,300);
+    ctx.stroke();
+
+
+    ctx.moveTo(10,10);
+    ctx.lineTo(10,40);
+    ctx.lineTo(25,40);
+    ctx.stroke();
+
+    ctx.moveTo(250,10);
+    ctx.lineTo(260,40);
+    ctx.lineTo(270,10);
+    ctx.stroke();
+
+    ctx.moveTo(250,70);
+    ctx.lineTo(250,40);
+    ctx.lineTo(260,70);
+    ctx.lineTo(270,40);
+    ctx.lineTo(270,70)
+    ctx.stroke();
+
+
+
+    ctx.moveTo(250,90);
+    ctx.lineTo(270,120);
+    ctx.moveTo(270,90);
+    ctx.lineTo(250,120);
+    ctx.stroke();
+
+    ctx.moveTo(270,150);
+    ctx.lineTo(250,150);
+    ctx.lineTo(250,200);
+    ctx.lineTo(270,200);
+    ctx.moveTo(270,175);
+    ctx.lineTo(250,175);
+    ctx.stroke();
+
+
+    ctx.moveTo(150,40);
+    ctx.lineTo(150,10);
+    ctx.lineTo(160,15);
+    ctx.lineTo(150,20);
+    ctx.stroke();
+
+
+
+</script>
+</body>
+</html>
