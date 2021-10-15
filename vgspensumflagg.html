@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="800" height="400" style="border:1px solid;"></canvas>
+
+
+
+<script>
+const myCanvas =document.getElementById("myCanvas");
+const ctx= myCanvas.getContext("2d");
+
+
+
+ctx.fillStyle='red';
+ctx.fillRect(100,100,24,24);
+
+ctx.fillStyle='blue';
+ctx.fillRect(128,100,8,64);
+
+ctx.fillStyle='red';
+ctx.fillRect(140,100,48,24);
+
+ctx.fillStyle='blue';
+ctx.fillRect(100,128,88,8);
+
+ctx.fillStyle='red';
+ctx.fillRect(100,140,24,24);
+
+ctx.fillStyle='red';
+ctx.fillRect(140,140,48,24);
+
+
+</script>
+</body>
+</html>

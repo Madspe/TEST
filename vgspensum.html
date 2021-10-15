@@ -15,7 +15,11 @@
 <script>
     //kobler sammen mot html objekt ovenfor
     var myCanvas =document.getElementById("myCanvas");
+    //definer ctx som innholdet i canvaset
     var ctx= myCanvas.getContext("2d");
+
+    ctx.fillStyle   = 'red';
+    ctx.strokeStyle = 'blue';
 
     //definerer startpunkt, linje til, linje til og stopp.
     ctx.beginPath();
@@ -23,6 +27,10 @@
     ctx.lineTo(140,60);
     ctx.lineTo(190,110);
     ctx.closePath();
+
+
+    ctx.font="50px Georgia";
+    ctx.fillText("se her", 90, 110)
     ctx.stroke();
 
 
@@ -70,6 +78,10 @@
     ctx.lineTo(160,15);
     ctx.lineTo(150,20);
     ctx.stroke();
+
+    ctx.rect(20,150,6,6);
+    ctx.stroke();
+
 
 
 
